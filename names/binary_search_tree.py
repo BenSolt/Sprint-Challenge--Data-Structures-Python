@@ -90,7 +90,7 @@ class BSTNode:
         q = Queue()
         q.enqueue(node)
         # while len(q) > 0:
-        while q.len() > 0:    
+        while q.len() > 0:
             node = q.dequeue()
             print(node.value)
             if node.left:
@@ -101,21 +101,20 @@ class BSTNode:
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
-        s = Stack()
-        s.push(node)
+        stack = Stack()
+        stack.push(node)
         # while len(s) > 0:
-        while s.len() > 0:   
+        while stack.len() > 0:   
             #remove 1
-            node = s.pop()
-            print(f"node value {node.value}")
+            node = stack.pop()
+            print(node.value)
             if node.left:
                 #add 1 to left
-                s.push(node.left)
-                # print(f'left {node.value}')
+                stack.push(node.left)
             if node.right:
                 #add 1 to right
-                s.push(node.right)
-                # print(f'right {node.value}')
+                stack.push(node.right)
+               
 
          
 
@@ -130,20 +129,20 @@ class BSTNode:
     def post_order_dft(self, node):
         pass
 
-bst = BSTNode(1)
-bst.insert(8)
-bst.insert(5)
-bst.insert(7)
-bst.insert(6)
-bst.insert(3)
-bst.insert(4)
-bst.insert(2)
-# bst.in_order_print(bst)
-print("Breadth first:")
-bst.bft_print(bst)
-print("Depth first:")
-bst.dft_print(bst)
-print("Recursive depth first:")
-bst.pre_order_dft(bst)
-print("Recursive post-order depth first:")
-bst.post_order_dft(bst)  
+# bst = BSTNode(1)
+# bst.insert(8)
+# bst.insert(5)
+# bst.insert(7)
+# bst.insert(6)
+# bst.insert(3)
+# bst.insert(4)
+# bst.insert(2)
+# # bst.in_order_print(bst)
+# print("Breadth first:")
+# bst.bft_print(bst)
+# print("Depth first:")
+# bst.dft_print(bst)
+# print("Recursive depth first:")
+# bst.pre_order_dft(bst)
+# print("Recursive post-order depth first:")
+# bst.post_order_dft(bst)  
